@@ -30,9 +30,6 @@ class Course(models.Model):
      product= fields.Float(string="Amount ", copy=False)
      
      
-     
-     
-   
      description1 = fields.Text(string="Title", requried=True)
      #description2 = fields.Text(string="Reference", size=32, readonly=True, states={"draft":[("readonly",False)]})
      #description2 = fields.Text(string="Week of year", size=24,readonly=True)
@@ -43,7 +40,6 @@ class Course(models.Model):
      description7 = fields.Text(string="Encrypted Report Details", invisible=True, copy=False)
      
      
-
      
      title_Boolean = fields.Boolean(string="Check Box", requried=True)
      default_company= fields.Boolean(string="Default Active", readonly=True)

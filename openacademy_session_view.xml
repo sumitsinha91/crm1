@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+  
+  
+      <record model="ir.ui.view" id="session_form_view">
+         <field name="name">session.form.view</field>
+         <field name="model">openacademy.session</field>
+         <field name="arch" type="xml">
+             <form string="Session Form">
+             <sheet>
+                <group>
+                    <field name="value"/>
+                    <field name="time"/>
+                    <field name="second"/>
+                    <field name="Matter"/>
+                </group>
+              </sheet>
+           </form>
+         </field>
+     </record>
+     
+     
+      <menuitem id= "main_openacademy_session_menu" name="Close Academy"/>
+     
+<!--      <menuitem id="openacademy_session_menu" name="Open Academy Close" -->
+<!--                parent="main_openacademy_menu"/> -->
+               
+     <menuitem id="openacademy_session_menu" name="Open Academy Close"
+               parent="main_openacademy_session_menu"/> 
+               
+        <record model="ir.actions.act_window" id="session_list_action">
+            <field name="name">Session</field>
+            <field name="res_model">openacademy.session</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field> 
+      </record>
+      
+<!--         <menuitem id="session_menu" name="Session"  -->
+<!--                   parent= "openacademy_menu" -->
+<!--                   action="session_list_action"/>  -->
+
+        <menuitem id="session_menu" name="Session" 
+                  parent= "openacademy_session_menu"
+                  action="session_list_action"/> 
+
+
+  </data>
+</openerp>

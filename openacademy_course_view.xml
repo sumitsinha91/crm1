@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+  
+     <record model="ir.ui.view" id="course_form_view">
+         <field name= "name">course.form.view</field>
+         <field name="model">openacademy.course</field>
+         <field name="arch" type="xml">
+	         <form string="Course Form">
+	         <sheet>
+	            <group>
+	                <field name="title"/>
+	              
+	                <field name="description1"/>
+	                
+<!-- 	                <field name="description2"/> -->
+<!-- 	                <field name="description3"/> -->
+	                <field name="description4"/>
+	                <field name="description5"/>
+	                <field name="description6"/>
+	                <field name="description7"/>
+	                <field name="title"/>
+<!-- 	                <field name= "week_year"/> -->
+<!-- 	                <field name= "origin"/> -->
+	                <field name="details"/>
+	                <field name="Report_name"/>
+	                <field name="number"/>
+	                <field name="password"/>
+	                <field name="duration"/>
+	                <field name="Balance"/>
+	                 <field name="quantity"/>
+	                  <field name="amount_currency"/>
+	                   <field name="planned_revenue"/>
+	                    <field name="amount"/>
+	                     <field name="product"/>
+	                      <field name="title_Boolean"/>
+	                       <field name="default_company"/>
+	                        <field name="seats"/>
+	                        <field name="number_opening"/>
+	                        <field name="day_week"/>
+	                        <field name="contact_number"/>
+	                        <field name="name_company"/>
+	                        
+	                
+	            </group>
+	          </sheet>
+	       </form>
+	     </field>
+     </record>
+      
+     <menuitem id= "main_openacademy_course_menu" name="Open Academy"/>
+     
+<!--      <menuitem id="openacademy_course_menu" name="Open Academy" -->
+<!--                parent="main_openacademy_menu"/> -->
+               
+     <menuitem id="openacademy_course_menu" name="Open Academy"
+               parent="main_openacademy_course_menu"/>
+               
+        <record model="ir.actions.act_window" id="course_list_action">
+            <field name="name">Courses</field>
+            <field name="res_model">openacademy.course</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field> 
+      </record>
+      
+<!--         <menuitem id="course_menu" name="Courses"  -->
+<!--                   parent= "openacademy_menu" -->
+<!--                   action="course_list_action"/>  -->
+
+        <menuitem id="course_menu" name="Courses" 
+                  parent= "openacademy_course_menu"
+                  action="course_list_action"/> 
+
+    
+  </data>
+</openerp>

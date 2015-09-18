@@ -37,8 +37,8 @@ class Course(models.Model):
      description4 = fields.Text(string="Details", required=True, select=True)
      description5 = fields.Text(string="Report Name",Requried=True,translate=True)
      description6 = fields.Text(string="Error Message", required=True)
-     description7 = fields.Text(string="Encrypted Report Details", invisible=True, copy=False)
-     
+     #description7 = fields.Text(string="Encrypted Report Details", invisible=True, copy=False)
+     description7 = fields.Text(string="Encrypted Report Details", invisible=True)
      
      
      title_Boolean = fields.Boolean(string="Check Box", requried=True)
